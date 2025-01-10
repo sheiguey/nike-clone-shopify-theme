@@ -1,0 +1,29 @@
+<header class="header-nav">
+    <div class="group-item">
+        <a href="/">
+          <img 
+            width="80"
+            height="50"
+            loading="lazy"
+            src="{{'nike.png' |  asset_url}}" />
+        </a>
+    </div>
+    <div class="group-item">
+      <ul class="middle-nav-bar">
+        {% for link in linklists['main-menu'].links %}
+            <li>{{link.title | link_to:link.url}}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    <div class="group-item">
+        <input  placeholder="Search" />
+        <a href="/">
+            <img width="25" height="25" loading="lazy" src="{{'f.png' |  asset_url}}" />
+        </a>
+        <a href="/">
+            <img width="25" height="25" loading="lazy" src="{{'d.png' |  asset_url}}" />
+        </a>
+    </div>
+</header>
+
+
