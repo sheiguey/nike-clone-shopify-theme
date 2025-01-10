@@ -23,8 +23,12 @@
 
  .announcement-bar-link-item {
      cursor: pointer;
+     list-style: none;
+     a{
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+     }
  }
 
- .announcement-bar-right-section{
-   
- }
+ 

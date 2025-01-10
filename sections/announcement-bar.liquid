@@ -22,18 +22,18 @@
     <div class="announcement-bar-right-section">
         <ul class="announcement-bar-link-list">
           {% if section.blocks.size==0 %}
-            <li>
+            <li class="announcement-bar-link-item">
                 <a href="#">Help</a>
             </li>
 
             {% if shop.customer_accounts_enabled   %}
             {% if customer %}
-            <li>
+            <li class="announcement-bar-link-item">
                 <a href="/account">Account</a>
             </li>
 
             {% else  %}
-            <li>
+            <li class="announcement-bar-link-item">
                 <a href="/account/login">Sign in</a>
             </li>
             {% endif %}
@@ -41,7 +41,8 @@
 
           {% else %}
           {% for block in section.blocks %}
-           <li>
+            
+           <li class="announcement-bar-link-item">
             <a href="{{block.settings.link}}">{{block.settings.text}}</a>
            </li>
           {% endfor %}
