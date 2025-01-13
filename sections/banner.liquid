@@ -5,12 +5,19 @@
         <div class="slide-text"  id="text3">Get Your Gear Faster</div>
     </div>
 </section> 
+
 <style>
-    .banner-wrapper{
-        background-color: {{section.settings.background}};
-        color:{{section.settings.textColor}};
+    .banner-section{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding:2rem;
     }
 
+    .banner-wrapper{
+        background-color: {{{% if section.settings.background !=blank %} section.settings.background {% else %} '#8080808c' {% endif %} }};
+        color:{{section.settings.textColor}};
+    }
     .slide-text{
         position: absolute;
         top:155px;
@@ -24,7 +31,6 @@
 </style>
 
 <script>
-
 
 document.addEventListener("DOMContentLoaded",slideShow);
 

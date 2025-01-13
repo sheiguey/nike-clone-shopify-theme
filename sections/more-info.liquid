@@ -11,9 +11,45 @@
         {% else %}
         <p>{{section.settings.text2}}</p>
         {% endif %}
+
+        <button>Shop</button>
     </div>
 
 </section>
+
+<style>
+    .more-info{
+        background: {{section.settings.background}};
+        color:{{section.settings.textColor}};
+        display:flex;
+        justify-content:center;
+    }
+
+    .more-info-wrapper{
+        display: flex;
+        flex-direction: column;
+        width: 500px;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .more-info-wrapper h1{
+         font-size: 50px;
+    }
+
+     .more-info-wrapper button{
+         padding: 10px 20px 10px 20px;
+         background-color: black;
+         border:none;
+         color: white;
+         border-radius: 20px;
+         cursor: pointer;
+    }
+
+    .more-info-wrapper button:hover{
+         background-color: rgb(185,185,185); 
+    }
+</style>
 
 {%  schema  %}  
 {
