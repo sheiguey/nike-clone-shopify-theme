@@ -2,17 +2,16 @@
     <h1>Featured Collections</h1>
     <div class="collection-container">
         <div class="all-collection-wrapper">
-           {% for colletion in collections %}
+           {% for collection in collections %}
             <div class="collection-card">
                 <img
                  width="300"
                  height="300"
                  loading="lazy"
-                 src="{{collection.featured_image | image_url:width:450}}"
+                 src="{{collection.featured_image | image_url}}"
                 />
-            <h3>{{collection.title | link_to: collection.url}}</h3>
+                <h3>{{- collection.title | link_to: collection.url}}</h3>
             </div>
-            
            {% endfor %}
         </div>
 

@@ -1,4 +1,4 @@
-<section class="banner-section">
+<section >
     <div class="banner-wrapper">
         <div class="slide-text"  id="text1">Members: Free Shipping!</div>
         <div class="slide-text"  id="text2">Save up to 40%</div>
@@ -7,24 +7,19 @@
 </section> 
 
 <style>
-    .banner-section{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        padding:2rem;
-    }
-
-    .banner-wrapper{
+    .banner-wrapper{ 
+        padding: 4rem;
         background-color: {{section.settings.background }} | '#8080808c';
         color:{{section.settings.textColor}};
     }
+
     .slide-text{
         position: absolute;
         top:155px;
         left: -150%;
         transform: translate(0,-40%);
         color: black;
-        padding: 20px;
+        padding: 5px;
         font-size: 20px;
         transition: left 0.5s ease-in-out;
     }
