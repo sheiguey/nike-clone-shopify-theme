@@ -1,0 +1,55 @@
+<section class="more-info-section">
+    <div class="more-info-wrapper">
+        {% if section.settings.text1 != blank %}
+        <h1>THE SOLUTION STARTER PACK</h1>
+        {%  else %}
+        <h1>{{section.settings.text1}}</h1>
+        {% endif %}
+
+        {% if section.settings.text2 != blank %}
+        <p>THE SOLUTION STARTER PACK</p>
+        {% else %}
+        <p>{{section.settings.text2}}</p>
+        {% endif %}
+    </div>
+
+</section>
+
+{%  schema  %}  
+{
+    "name": "more-info",
+    "settings": [
+            {
+            "type": "color",
+            "id": "background",
+            "label": "Background color",
+            "default": "#F4F4F4"
+            },
+            {
+            "type": "color",
+            "id": "textColor",
+            "label": "Text color",
+            "default": "#000000"
+            },
+            {
+            "type": "text",
+            "id": "text1",
+            "label": "Text1",
+            "default": "default text1"
+            },
+            {
+            "type": "text",
+            "id": "text2",
+            "label": "Text2",
+            "default": "default text2"
+            }
+    ],
+
+    "presets": [
+        {
+         "name": "More info section"
+        }
+    ]
+}
+
+{% endschema %}

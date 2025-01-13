@@ -1,0 +1,107 @@
+<section class="three-images-section">
+    <div class="three-images-wrapper">
+        {% if section.settings.image1 != blank %}
+        <div class="custom-image-1"></div>
+        {% else %}
+        <div class="image-1"></div>
+        {% endif %}
+
+        {% if section.settings.image2 != blank %}
+        <div class="custom-image-2"></div>
+        {% else %}
+        <div class="image-2"></div>
+        {% endif %}
+
+        {% if section.settings.image3 != blank %}
+        <div class="custom-image-3"></div>
+        {% else %}
+        <div class="image-3"></div>
+        {% endif %}
+    </div>
+</section>
+
+<style>
+.three-images-wrapper{
+    display: flex;
+}
+
+.image-1{
+    background-image: url("{{'one.png' | asset_url}}");
+    width: 33.3333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.custom-image-1{
+    background-image: url("{{ section.settings.image1| image_url}}");
+    width: 33.3333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-2{
+    background-image: url("{{'two.png' | asset_url}}");
+    width: 33.3333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.custom-image-2{
+    background-image: url("{{ section.settings.image2| image_url}}");
+    width: 33.3333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.image-3{
+    background-image: url("{{'three.png' | asset_url}}");
+    width: 33.3333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+.custom-image-3{
+    background-image: url("{{ section.settings.image3| image_url}}");
+    width: 33.3333%;
+    height: 500px;
+    background-size: cover;
+    background-position: center;
+}
+
+</style>
+
+{% schema %}  
+{
+   "name":"three-images" ,
+   "settings": [
+    {
+    "type": "image_picker",
+    "id": "image1",
+    "label": "pick image",
+    "info": "400*120px png recommended format"
+    },
+    {
+    "type": "image_picker",
+    "id": "image2",
+    "label": "pick image",
+    "info": "400*120px png recommended format"
+    },
+    {
+    "type": "image_picker",
+    "id": "image3",
+    "label": "pick image",
+    "info": "400*120px png recommended format"
+    }
+   ],
+   "presets": [
+    {
+        "name": "three-images"
+    }
+   ]
+}
+{% endschema %} 
