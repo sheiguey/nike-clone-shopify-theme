@@ -31,6 +31,7 @@
         }
         
     },
+
     "order": [
         "banner",
         "three-images",
@@ -38,4 +39,5 @@
         "all-collections",
         "all-products"
     ]
+    
 }

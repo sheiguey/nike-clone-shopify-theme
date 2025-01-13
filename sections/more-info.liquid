@@ -1,4 +1,4 @@
-<section class="more-info-section">
+<section class="more-info">
     <div class="more-info-wrapper">
         {% if section.settings.text1 != blank %}
         <h1>THE SOLUTION STARTER PACK</h1>
@@ -14,24 +14,28 @@
 
         <button>Shop</button>
     </div>
-
 </section>
 
 <style>
-    .more-info{
-        background: {{section.settings.background}};
-        color:{{section.settings.textColor}};
-        display:flex;
-        justify-content:center;
-    }
+     .more-info {
+    background: {{ section.settings.background }}
+    ;
+    color: {{ section.settings.text_color }}
+    ;
+    display: flex;
+    justify-content: center;
+  }
 
-    .more-info-wrapper{
-        display: flex;
-        flex-direction: column;
-        width: 500px;
-        justify-content: center;
-        align-items: center;
-    }
+   .more-info-wrapper{
+      display: flex;
+      flex-direction: column;
+      width: 600px;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+   }
+
+ 
 
     .more-info-wrapper h1{
          font-size: 50px;
@@ -49,6 +53,7 @@
     .more-info-wrapper button:hover{
          background-color: rgb(185,185,185); 
     }
+    
 </style>
 
 {%  schema  %}  
@@ -87,5 +92,4 @@
         }
     ]
 }
-
 {% endschema %}

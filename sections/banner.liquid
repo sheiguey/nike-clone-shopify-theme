@@ -15,7 +15,7 @@
     }
 
     .banner-wrapper{
-        background-color: {{{% if section.settings.background !=blank %} section.settings.background {% else %} '#8080808c' {% endif %} }};
+        background-color: {{section.settings.background }} | '#8080808c';
         color:{{section.settings.textColor}};
     }
     .slide-text{
